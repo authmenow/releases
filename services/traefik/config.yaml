@@ -3,8 +3,8 @@ http:
     traefik:
       rule: "Host(`traefik.{{ env "DOMAIN_NAME" }}`)"
       service: "api@internal"
-      middlewares: "dashboard-auth"
-      port: "8080"
+      #middlewares: "dashboard-auth"
+      #port: "8080"
 
   middlewares:
     dashboard-auth:
