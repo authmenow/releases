@@ -35,4 +35,3 @@ services:
       PUBLIC_URL: https://accesso.sova.dev
       IMAGE_URL: https://accesso.sova.dev/images
       DEBUG: "true"
-      BACKEND_URL: https://${DOMAIN_NAME}/api/internal
