@@ -1,10 +1,8 @@
 http:
   routers:
     traefik:
-      rule: Host(`traefik.{{ env "DOMAIN_NAME" }}`)
+      rule: "Host(`traefik.{{ env "DOMAIN_NAME" }}`)"
       service: "api@internal"
-      tls:
-        certresolver: le
       middlewares: "dashboard-auth"
       port: "8080"
 
