@@ -6,7 +6,7 @@ http:
       tls:
         certresolver: le
       middlewares: "dashboard-auth"
-      entrypoints: "websecure"
+      port: "8080"
 
   middlewares:
     dashboard-auth:
