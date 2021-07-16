@@ -46,14 +46,15 @@ services:
     <<: *logging
     labels:
       traefik.enable: "true"
-      traefik.http.routers.traefik: "true"
+      traefik.http.routers.traefik.rule: "Host(`traefik.${DOMAIN_NAME}`)"
+      traefik.http.routers.traefik.service: "api@internal"
+      traefik.http.routers.traefik.tls: "true"
     networks:
       accesso:
     environment:
       DOMAIN_NAME: ${DOMAIN_NAME}
     ports:
       - "80:80"
-      - "8080:8080"
       - "443:443"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
