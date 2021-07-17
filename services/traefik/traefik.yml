@@ -33,7 +33,7 @@ certificatesResolvers:
   le:
     acme:
       email: mail@sergeysova.com
-      storage: /tls/acme.json
+      storage: /letsencrypt/acme.json
       tlsChallenge: true
       httpChallenge:
         entryPoint: web
