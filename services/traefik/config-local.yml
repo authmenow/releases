@@ -1,13 +1,4 @@
 http:
-  routers:
-    traefik:
-      rule: "Host(`traefik.accesso.localhost`)"
-      service: "api@internal"
-      tls:
-        domains:
-          - main: "accesso.localhost"
-            sans:
-              - "*.accesso.localhost"
   middlewares:
     api-internal-stripprefix:
       stripPrefix:
