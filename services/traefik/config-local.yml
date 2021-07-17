@@ -8,6 +8,11 @@ http:
           - main: "accesso.localhost"
             sans:
               - "*.accesso.localhost"
+  middlewares:
+    api-internal-stripprefix:
+      stripPrefix:
+        prefixes:
+          - "/api/internal"
 
 tls:
   certificates:
