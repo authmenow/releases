@@ -143,7 +143,7 @@ services:
     labels:
       traefik.enable: "true"
       traefik.http.services.api-internal.loadbalancer.server.port: "9008"
-      traefik.http.routers.api-internal.rule: "Host(`${DOMAIN_NAME}`) && PathPrefix(`/api/internal`)"
+      traefik.http.routers.api-internal.rule: "Host(`${DOMAIN_NAME}`) && PathPrefix(`/api/internal/`)"
       traefik.http.routers.api-internal.middlewares: "api-internal-stripprefix@file"
       traefik.http.routers.api-internal.service: "api-internal"
     networks:
